@@ -30,22 +30,6 @@ def fetch_stats(selected_user, df):
 
     return num_messages, len(words), num_media_messages, len(links_lst)
 
-    # if selected_user=='Overall':
-    #     # 1. no. of msgs
-    #     num_messages= df.shape[0]
-    #     # 2. no. of words
-    #     words = []
-    #     for message in df['message']:
-    #         words.extend(message.split(' '))  # message.split(' ') --> list of words
-    #     return num_messages, len(words)
-    # else:
-    #     new_df=df[df['user']==selected_user]
-    #     num_messages = new_df.shape[0]
-    #     words = []
-    #     for message in new_df['message']:
-    #         words.extend(message.split(' '))
-    #     return num_messages, len(words) # for xyz no. of rows (msgs)
-
 
 def fetch_most_busy_user(df):
     x = df['user'].value_counts().head()
